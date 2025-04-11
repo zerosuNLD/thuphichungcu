@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLFile.admin.TraCuuCanHo.ChiTietCanHoController">
+   <children>
+      <Label layoutX="290.0" layoutY="23.0" text="Chi tiết căn hộ 301" textFill="RED">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <VBox layoutX="60.0" layoutY="155.0" prefHeight="211.0" prefWidth="218.0" spacing="10.0">
+         <children>
+            <Label text="Chủ căn hộ: Nguyễn Văn A">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="Vợ/ Chồng: Nguyễn Hương A">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="Con cái: Nguyễn Văn B">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="Dân tộc: Kinh">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="Ngày sinh: xx/xx/xxxx">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="Số điện thoại: XXXXXXXXX">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label layoutX="60.0" layoutY="108.0" text="Thông tin hộ gia đình">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="475.0" layoutY="104.0" text="Thông tin căn hộ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <VBox layoutX="617.0" layoutY="185.0" prefHeight="158.0" prefWidth="151.0" spacing="10.0">
+         <children>
+            <Label text="Số phòng: 301">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="Tầng: 3">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="Kiểu căn hộ:  Nhà ở">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="Diện tích: 25m^2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="Ngày thuê: xx/xx/xxxx">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Line endX="582.199951171875" endY="96.0" layoutX="169.0" layoutY="57.0" startX="211.79998779296875" startY="96.0" stroke="#ff2f00" />
+      <Line endX="140.20001220703125" endY="286.0" layoutX="179.0" layoutY="81.0" startX="140.20001220703125" startY="17.199996948242188" stroke="#ff2f00" />
+      <ImageView fitHeight="149.0" fitWidth="200.0" layoutX="388.0" layoutY="187.0">
+         <image>
+            <Image url="@../../../../../../../../Desktop/OIP.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="60.0" layoutY="41.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 3, 0); -fx-border-radius: 100px;" />
+      <Label layoutX="60.0" layoutY="430.0" text="Tình trạng đóng tiền:  Chưa đóng tiền tháng 11/2025, 12/2025 ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="470.0" text="Cảnh cáo: Mức 2" textFill="#dc0707">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Text fill="#960000" layoutX="52.0" layoutY="554.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lưu ý: Các căn hộ khi đạt cảnh cáo mức 3 sẽ bị đuổi , đồng thời cần phải thanh toán tiền trong vòng 3 ngày, nếu không sẽ phải chịu trách nhiệm hình sự dựa trên pháp luật nước việt nam dân chủ cộng hòa" wrappingWidth="707.25390625">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

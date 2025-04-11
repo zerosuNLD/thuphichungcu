@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="ScreenAdmin" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ScreenAdminController">
+			
+	<top>
+		<fx:include source="Menu.fxml" />
+	</top>
+	
+	<left>
+		<fx:include source="TaskBarAdmin.fxml" />
+	</left>
+	
+	<center>
+		<fx:include source="../admin/QLThuPhi/QLThuPhi.fxml" />
+	</center>
+
+</BorderPane>
