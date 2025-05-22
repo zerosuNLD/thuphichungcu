@@ -2,10 +2,11 @@ package FXMLFile.admin.QLTaiKhoan;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
-import Controller.ThangController;
 import Model.Model;
+import Model.User;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -28,14 +29,18 @@ public class QLTaiKhoanController implements Initializable{
 		// TODO Auto-generated method stub
 		int column = 0;
 		int row = 1;
+		List<User> users = Model.getInstance().getAllUsers();
 
-		for (int i = 1; i < 13; i++) {
+		for (int i = 1; i < users.size(); i++) {
 			FXMLLoader fxmlLoader = new FXMLLoader();
+			User current_userUser = users.get(i);
 			fxmlLoader.setLocation(getClass().getResource("/FXMLFile/admin/QLTaiKhoan/taiKhoan.fxml"));
 			AnchorPane anchorPane;
 			try {
 				anchorPane = fxmlLoader.load();
-
+				taiKhoanController taiKhoanController = fxmlLoader.getController();
+				taiKhoanController.setData(current_userUser);
+				
 //				taiKhoanController taiKhoanController = fxmlLoader.getController();
 //				taiKhoanController.setData(i);
 //

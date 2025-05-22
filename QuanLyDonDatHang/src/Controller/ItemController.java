@@ -26,6 +26,6 @@ public class ItemController {
 		thang.setText("Thang " + items.getThang());
 		tien.setText(items.getTien() + "VND");
 		trangThai.setText(items.getTrangThai());
-		time.setText(items.getTime());
+		time.setText(String.valueOf(items.getTime()));
 	}
 }

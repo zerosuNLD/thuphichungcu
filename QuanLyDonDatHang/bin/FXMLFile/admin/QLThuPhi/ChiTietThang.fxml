@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ChiTietThangController">
    <children>
-      <Label alignment="CENTER" layoutX="386.0" layoutY="28.0" text="Danh sách đóng thuế từng căn hộ tháng 11" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0">
+      <Label fx:id="title" alignment="CENTER" layoutX="386.0" layoutY="28.0" text="Danh sách đóng thuế từng căn hộ tháng 11" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0">
          <font>
             <Font size="25.0" />
          </font>

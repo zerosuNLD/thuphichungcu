@@ -1,20 +1,22 @@
 package Items;
 
+import java.util.Date;
+
 public class Items {
 	private int thang;
-	private int tien;
+	private double tien;
 	private String trangThai;
-	private String time;
+	private Date time;
 	
 	public Items() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Items(int thang, int tien, String trangThai, String time) {
+	public Items(int thang, double tien, String trangThai, java.util.Date date) {
 		this.thang = thang;
 		this.tien = tien;
 		this.trangThai = trangThai;
-		this.time = time;
+		this.time = date;
 	}
 	
 	public int getThang() {
@@ -23,7 +25,7 @@ public class Items {
 	public void setThang(int thang) {
 		this.thang = thang;
 	}
-	public int getTien() {
+	public double getTien() {
 		return tien;
 	}
 	public void setTien(int tien) {
@@ -35,10 +37,10 @@ public class Items {
 	public void setTrangThai(String trangThai) {
 		this.trangThai = trangThai;
 	}
-	public String getTime() {
+	public Date getTime() {
 		return time;
 	}
-	public void setTime(String time) {
+	public void setTime(Date time) {
 		this.time = time;
 	}
 

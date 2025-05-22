@@ -13,10 +13,10 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="800.0" style="-fx-background-color: #d1d1d1;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PhiController">
    <children>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+      <AnchorPane layoutX="15.0" layoutY="15.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="15.400000000000091" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.400000000000091" AnchorPane.topAnchor="15.0">
          <children>
             <Button fx:id="XacNhan_btn" layoutX="630.0" layoutY="566.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="117.0" style="-fx-background-color: #FA0707; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 3, 0);" text="Xác nhận" textFill="WHITE" />
-            <Label layoutX="63.0" layoutY="105.0" text="Phí dịch vụ chung cư (Bắt buộc | 16.500 đồng/m2/tháng )" />
+            <Label layoutX="358.0" layoutY="142.0" text="Phí dịch vụ chung cư (Bắt buộc | 16.500 đồng/m2/tháng )" />
             <Label layoutX="64.0" layoutY="189.0" text="Quỹ tự nguyện (tùy chọn)">
                <font>
                   <Font size="24.0" />
@@ -27,7 +27,7 @@
                   <HBox prefHeight="6.0" prefWidth="200.0">
                      <children>
                         <Label prefHeight="18.0" prefWidth="192.0" text="Quỹ vì người nghèo" />
-                        <TextField>
+                        <TextField fx:id="quy_nguoi_ngheo">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -37,68 +37,73 @@
                   <HBox prefHeight="10.0" prefWidth="200.0">
                      <children>
                         <Label prefHeight="18.0" prefWidth="192.0" text="Quỹ vì biển đảo việt nam" />
-                        <TextField />
+                        <TextField fx:id="quy_bien_dao" />
                      </children>
                   </HBox>
                   <HBox prefHeight="0.0" prefWidth="200.0">
                      <children>
                         <Label prefHeight="18.0" prefWidth="192.0" text="Quỹ lễ đình gừng" />
-                        <TextField />
+                        <TextField fx:id="quy_dinh_gung" />
                      </children>
                   </HBox>
                   <HBox prefHeight="0.0" prefWidth="200.0">
                      <children>
                         <Label prefHeight="18.0" prefWidth="192.0" text="Quỹ tố DP" />
-                        <TextField />
+                        <TextField fx:id="quy_to" />
                      </children>
                   </HBox>
                   <HBox prefHeight="11.0" prefWidth="200.0">
                      <children>
                         <Label prefHeight="18.0" prefWidth="192.0" text="Quỹ vì trẻ thơ" />
-                        <TextField />
+                        <TextField fx:id="quy_tre_tho" />
                      </children>
                   </HBox>
                   <HBox prefHeight="0.0" prefWidth="200.0">
                      <children>
                         <Label prefHeight="18.0" prefWidth="192.0" text="Quỹ nhân đạo từ thiện" />
-                        <TextField />
+                        <TextField fx:id="quy_nhan_dao" />
                      </children>
                   </HBox>
                   <HBox prefHeight="0.0" prefWidth="200.0">
                      <children>
                         <Label prefHeight="18.0" prefWidth="192.0" text="Quỹ tình nghĩa" />
-                        <TextField />
+                        <TextField fx:id="quy_tinh_nghia" />
                      </children>
                   </HBox>
                   <HBox prefHeight="0.0" prefWidth="200.0">
                      <children>
                         <Label prefHeight="18.0" prefWidth="192.0" text="Quỹ khuyến học" />
-                        <TextField />
+                        <TextField fx:id="quy_khuyen_hoc" />
                      </children>
                   </HBox>
                   <HBox prefHeight="8.0" prefWidth="200.0">
                      <children>
                         <Label prefHeight="18.0" prefWidth="192.0" text="Quỹ người cao tuổi" />
-                        <TextField />
+                        <TextField fx:id="quy_cao_tuoi" />
                      </children>
                   </HBox>
                </children>
             </VBox>
-            <Label layoutX="408.0" layoutY="105.0" prefHeight="18.0" prefWidth="127.0" text="1.000.000 VND" />
-            <Label layoutX="409.0" layoutY="147.0" prefHeight="18.0" prefWidth="127.0" text="1.000.000 VND" />
             <Line endX="285.5999755859375" endY="27.800003051757812" layoutX="164.0" layoutY="193.0" startX="285.5999755859375" startY="291.0" stroke="#005fff" />
             <Label layoutX="491.0" layoutY="298.0" text="Tổng số tiền cần đóng">
                <font>
                   <Font size="25.0" />
                </font>
             </Label>
-            <Label layoutX="533.0" layoutY="342.0" text="3.000.000 VND">
+            <Label fx:id="total" layoutX="533.0" layoutY="342.0" text="3.000.000 VND">
                <font>
                   <Font size="25.0" />
                </font>
             </Label>
             <CheckBox layoutX="63.0" layoutY="572.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="219.0" text="Tôi đồng ý với những điều trên" />
             <Line endX="556.7999877929688" layoutX="164.0" layoutY="541.0" startX="-100.0" stroke="#005fff" />
+            <Label layoutX="358.0" layoutY="101.0" text="Phí quản lý chung cư (Bắc buộc |  7.000 đồng/m2.)" />
+            <Label fx:id="PhiBatBuoc" layoutX="63.0" layoutY="123.0" text="Phí chung cư: 2.000.000 VND ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Line endX="141.20001220703125" endY="-88.60000610351562" layoutX="168.0" layoutY="185.0" startX="141.20001220703125" startY="-14.20001220703125" stroke="#005fff" />
          </children>
       </AnchorPane>
       <Label alignment="CENTER" layoutX="150.0" layoutY="31.0" prefHeight="30.0" prefWidth="239.0" text="PHÍ CẦN ĐÓNG THÁNG 12" textFill="#0b08ab" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0">
@@ -106,7 +111,6 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="79.0" layoutY="162.0" text="Phí quản lý chung cư (Bắc buộc |  7.000 đồng/m2.)" />
       <Line endX="556.7999877929688" layoutX="174.0" layoutY="77.0" startX="-100.0" stroke="#005fff" />
    </children>
 </AnchorPane>

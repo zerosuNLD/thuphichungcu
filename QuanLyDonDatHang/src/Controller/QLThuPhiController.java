@@ -28,6 +28,7 @@ public class QLThuPhiController implements Initializable {
 		int row = 1;
 
 		for (int i = 1; i < 13; i++) {
+			int currentMonth = i;
 			FXMLLoader fxmlLoader = new FXMLLoader();
 			fxmlLoader.setLocation(getClass().getResource("/FXMLFile/admin/QLThuPhi/thang.fxml"));
 			AnchorPane anchorPane;
@@ -40,6 +41,7 @@ public class QLThuPhiController implements Initializable {
 				anchorPane.setOnMouseClicked(event -> {
 //					System.out.println("Đã click vào tháng " + thang);
 					// Gọi hàm mở giao diện chi tiết tháng
+					Model.getInstance().setSelectedMonth(currentMonth); // Lưu tháng được chọn
 					Model.getInstance().getViewFactory().getDVBHScreenSelectedMenuItemProperty().set("ChiTietThang");
 				});
 

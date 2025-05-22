@@ -7,22 +7,22 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="750.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 12, 0, 5, 0); -fx-background-color: #D1D1D1;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ThueCanHoController">
    <children>
-      <Label alignment="CENTER" layoutX="56.0" layoutY="17.0" text="Phòng 301" textFill="#3150ff" AnchorPane.rightAnchor="622.0">
+      <Label fx:id="phong" alignment="CENTER" layoutX="56.0" layoutY="17.0" text="Phòng 301" textFill="#3150ff" AnchorPane.rightAnchor="622.0">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="251.0" layoutY="14.0" text="3.000.000 VND" textFill="#3150ff">
+      <Label fx:id="amount" layoutX="251.0" layoutY="14.0" text="3.000.000 VND" textFill="#3150ff">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="475.0" layoutY="16.0" text="Đã đóng" textFill="#3150ff">
+      <Label fx:id="status" layoutX="475.0" layoutY="16.0" text="Đã đóng" textFill="#3150ff">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="650.0" layoutY="17.0" text="11/3/2025" textFill="#3150ff">
+      <Label fx:id="ngaydong" layoutX="650.0" layoutY="17.0" text="11/3/2025" textFill="#3150ff">
          <font>
             <Font size="15.0" />
          </font>

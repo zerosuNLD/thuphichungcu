@@ -6,8 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import Items.CanHo;
 import Items.Items;
+import Model.Model;
+import Model.PaymentInfo;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -32,8 +33,9 @@ public class LichSuController implements Initializable{
 		List<Items> items = new ArrayList<>();
 		Items item;
 
-		for (int i = 0; i < 20; i++) {
-			item = new Items(11,3000000, "Đã đóng", "29/11/2025");
+		for (int i = 1; i < 13; i++) {
+			PaymentInfo paymentInfo = Model.getInstance().getMonthlyPaymentInfo(i, 2024);
+			item = new Items(i,paymentInfo.getAmount(), paymentInfo.getStatus(), paymentInfo.getPaymentDate());
 			items.add(item);
 		}
 

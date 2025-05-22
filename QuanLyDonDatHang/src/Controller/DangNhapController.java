@@ -47,19 +47,39 @@ public class DangNhapController implements Initializable {
 	}
 
 	private void onLogin() {
+		String accountString = account.getText().toString();
+		String passwordString = password.getText().toString();
+		
 		switch (Choice) {
 
 		case 0 -> {
-			Stage stage = (Stage) login_btn.getScene().getWindow();
-			Model.getInstance().getViewFactory().showScreenAdmin();
-			Model.getInstance().getViewFactory().closeStage(stage);
+			boolean success = Model.getInstance().login(accountString, passwordString, "admin");
+			
+			if (success) {
+			    System.out.println("Đăng nhập thành công");
+			    Stage stage = (Stage) login_btn.getScene().getWindow();
+				Model.getInstance().getViewFactory().showScreenAdmin();
+				Model.getInstance().getViewFactory().closeStage(stage);
+
+			} else {
+			    System.out.println("Sai tài khoản hoặc mật khẩu");
+			}
 			
 		}
 
-		case 1 -> {
-			Stage stage = (Stage) login_btn.getScene().getWindow();
-			Model.getInstance().getViewFactory().showDVBHScreen();
-			Model.getInstance().getViewFactory().closeStage(stage);
+		case 1 -> {	
+			boolean success = Model.getInstance().login(accountString, passwordString, "user");
+		
+			if (success) {
+			    System.out.println("Đăng nhập thành công");
+			    Stage stage = (Stage) login_btn.getScene().getWindow();
+				Model.getInstance().getViewFactory().showDVBHScreen();
+				Model.getInstance().getViewFactory().closeStage(stage);
+
+
+			} else {
+			    System.out.println("Sai tài khoản hoặc mật khẩu");
+			}
 		}
 
 		case -1 -> {
