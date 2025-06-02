@@ -1,1 +1,2 @@
 this is a test log for the project
+today 02/06/2025: passed. error = 0
